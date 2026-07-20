@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RsF6C1jX70A=",
+  "dgSpecHash": "v2bLLUUp6DM=",
   "success": true,
   "projectFilePath": "/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/ChaseListAPI.csproj",
   "expectedPackageFiles": [
@@ -14,10 +14,12 @@
     "/Users/mcusi/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/rbush.signed/4.0.0/rbush.signed.4.0.0.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/sixlabors.fonts/1.0.0/sixlabors.fonts.1.0.0.nupkg.sha512",
+    "/Users/mcusi/.nuget/packages/sixlabors.imagesharp/4.0.0/sixlabors.imagesharp.4.0.0.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/swashbuckle.aspnetcore/10.2.3/swashbuckle.aspnetcore.10.2.3.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/swashbuckle.aspnetcore.swagger/10.2.3/swashbuckle.aspnetcore.swagger.10.2.3.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.2.3/swashbuckle.aspnetcore.swaggergen.10.2.3.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.2.3/swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512",
+    "/Users/mcusi/.nuget/packages/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg.sha512",
     "/Users/mcusi/.nuget/packages/system.io.packaging/8.0.1/system.io.packaging.8.0.1.nupkg.sha512"
   ],
   "logs": []

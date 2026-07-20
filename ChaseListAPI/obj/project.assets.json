@@ -152,6 +152,26 @@
           }
         }
       },
+      "SixLabors.ImageSharp/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Hashing": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/SixLabors.ImageSharp.props": {},
+          "build/SixLabors.ImageSharp.targets": {}
+        }
+      },
       "Swashbuckle.AspNetCore/10.2.3": {
         "type": "package",
         "dependencies": {
@@ -217,6 +237,22 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "System.IO.Hashing/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
       },
       "System.IO.Packaging/8.0.1": {
         "type": "package",
@@ -669,6 +705,25 @@
         "sixlabors.fonts.nuspec"
       ]
     },
+    "SixLabors.ImageSharp/4.0.0": {
+      "sha512": "6Ft5sclM1t5bY+P0SsLLGwXIAgmDASFFD9hD0tlEcfFCU8Yj9nR7ZzaqCL/p+SIfqoe8jLKFHD7LFPRJPGXZ5w==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "build/SixLabors.ImageSharp.targets",
+        "build/net472/SixLabors.Licensing.dll",
+        "build/net8.0/SixLabors.Licensing.dll",
+        "lib/net8.0/SixLabors.ImageSharp.dll",
+        "lib/net8.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.4.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/10.2.3": {
       "sha512": "8KNh1RWvofdU6DVLyBs4Z/OpUMnmf8oNvJQc0QxpwySRbi42bwLfdVMMrXZWANg5U5KQGQq1xW6r/hlcqw99tQ==",
       "type": "package",
@@ -746,6 +801,36 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+    "System.IO.Hashing/8.0.0": {
+      "sha512": "ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==",
+      "type": "package",
+      "path": "system.io.hashing/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Hashing.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "lib/net462/System.IO.Hashing.dll",
+        "lib/net462/System.IO.Hashing.xml",
+        "lib/net6.0/System.IO.Hashing.dll",
+        "lib/net6.0/System.IO.Hashing.xml",
+        "lib/net7.0/System.IO.Hashing.dll",
+        "lib/net7.0/System.IO.Hashing.xml",
+        "lib/net8.0/System.IO.Hashing.dll",
+        "lib/net8.0/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.8.0.0.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Packaging/8.0.1": {
       "sha512": "KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
       "type": "package",
@@ -778,8 +863,9 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "ClosedXml >= 0.105.0",
+      "ClosedXML >= 0.105.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
+      "SixLabors.ImageSharp >= 4.0.0",
       "Swashbuckle.AspNetCore >= 10.2.3"
     ]
   },
@@ -828,13 +914,17 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
-          "ClosedXml": {
+          "ClosedXML": {
             "target": "Package",
             "version": "[0.105.0, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.9, )"
+          },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[4.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
