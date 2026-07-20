@@ -34,3 +34,12 @@
 /Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/ClosedXML.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/ClosedXML.Parser.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/DocumentFormat.OpenXml.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/DocumentFormat.OpenXml.Framework.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/ExcelNumberFormat.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/RBush.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/SixLabors.Fonts.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/bin/Debug/net10.0/System.IO.Packaging.dll
+/Users/mcusi/Desktop/Git Dev/ChaseListAPI/ChaseListAPI/obj/Debug/net10.0/ChaseListAPI.sourcelink.json
