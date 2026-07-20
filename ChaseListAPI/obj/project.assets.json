@@ -152,24 +152,20 @@
           }
         }
       },
-      "SixLabors.ImageSharp/4.0.0": {
+      "SixLabors.ImageSharp/3.1.5": {
         "type": "package",
-        "dependencies": {
-          "System.IO.Hashing": "8.0.0"
-        },
         "compile": {
-          "lib/net8.0/SixLabors.ImageSharp.dll": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/SixLabors.ImageSharp.dll": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "build/SixLabors.ImageSharp.props": {},
-          "build/SixLabors.ImageSharp.targets": {}
+          "build/SixLabors.ImageSharp.props": {}
         }
       },
       "Swashbuckle.AspNetCore/10.2.3": {
@@ -237,22 +233,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "System.IO.Hashing/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.IO.Hashing.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.IO.Hashing.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
       },
       "System.IO.Packaging/8.0.1": {
         "type": "package",
@@ -705,22 +685,19 @@
         "sixlabors.fonts.nuspec"
       ]
     },
-    "SixLabors.ImageSharp/4.0.0": {
-      "sha512": "6Ft5sclM1t5bY+P0SsLLGwXIAgmDASFFD9hD0tlEcfFCU8Yj9nR7ZzaqCL/p+SIfqoe8jLKFHD7LFPRJPGXZ5w==",
+    "SixLabors.ImageSharp/3.1.5": {
+      "sha512": "lNtlq7dSI/QEbYey+A0xn48z5w4XHSffF8222cC4F4YwTXfEImuiBavQcWjr49LThT/pRmtWJRcqA/PlL+eJ6g==",
       "type": "package",
-      "path": "sixlabors.imagesharp/4.0.0",
+      "path": "sixlabors.imagesharp/3.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "build/SixLabors.ImageSharp.props",
-        "build/SixLabors.ImageSharp.targets",
-        "build/net472/SixLabors.Licensing.dll",
-        "build/net8.0/SixLabors.Licensing.dll",
-        "lib/net8.0/SixLabors.ImageSharp.dll",
-        "lib/net8.0/SixLabors.ImageSharp.xml",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
         "sixlabors.imagesharp.128.png",
-        "sixlabors.imagesharp.4.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.3.1.5.nupkg.sha512",
         "sixlabors.imagesharp.nuspec"
       ]
     },
@@ -801,36 +778,6 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
-    "System.IO.Hashing/8.0.0": {
-      "sha512": "ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==",
-      "type": "package",
-      "path": "system.io.hashing/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.IO.Hashing.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
-        "lib/net462/System.IO.Hashing.dll",
-        "lib/net462/System.IO.Hashing.xml",
-        "lib/net6.0/System.IO.Hashing.dll",
-        "lib/net6.0/System.IO.Hashing.xml",
-        "lib/net7.0/System.IO.Hashing.dll",
-        "lib/net7.0/System.IO.Hashing.xml",
-        "lib/net8.0/System.IO.Hashing.dll",
-        "lib/net8.0/System.IO.Hashing.xml",
-        "lib/netstandard2.0/System.IO.Hashing.dll",
-        "lib/netstandard2.0/System.IO.Hashing.xml",
-        "system.io.hashing.8.0.0.nupkg.sha512",
-        "system.io.hashing.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.IO.Packaging/8.0.1": {
       "sha512": "KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
       "type": "package",
@@ -865,7 +812,7 @@
     "net10.0": [
       "ClosedXML >= 0.105.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
-      "SixLabors.ImageSharp >= 4.0.0",
+      "SixLabors.ImageSharp >= 3.1.5",
       "Swashbuckle.AspNetCore >= 10.2.3"
     ]
   },
@@ -924,7 +871,7 @@
           },
           "SixLabors.ImageSharp": {
             "target": "Package",
-            "version": "[4.0.0, )"
+            "version": "[3.1.5, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -1367,5 +1314,27 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SixLabors.ImageSharp' 3.1.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-2cmq-823j-5qj8",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SixLabors.ImageSharp' 3.1.5 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-rxmq-m78w-7wmc",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
