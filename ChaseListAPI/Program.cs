@@ -8,8 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddScoped<ExcelService>();
 builder.Services.AddScoped<ImageServices>();
-
+builder.Services.AddScoped<ValidationService>();
 
 var app = builder.Build();
 

@@ -1,28 +1,27 @@
 # ChaseListAPI
 
-A simple ASP.NET Core 10 Web API for uploading an Excel file and related images in a single request.
+A minimal ASP.NET Core 10 Web API for uploading an Excel file and related images in a single request.
 
 ## Project structure
 
-- `ChaseListAPI/ChaseListAPI.csproj` - ASP.NET Core Web API project file.
-- `ChaseListAPI/Program.cs` - application startup and middleware configuration.
-- `ChaseListAPI/Controllers/JobsController.cs` - controller for file upload endpoint.
-- `ChaseListAPI/Models/JobuploadRequest.cs` - request model for uploaded files.
+- [ChaseListAPI/ChaseListAPI.csproj](ChaseListAPI/ChaseListAPI.csproj) - project file.
+- [ChaseListAPI/Program.cs](ChaseListAPI/Program.cs) - startup and middleware configuration.
+- [ChaseListAPI/Controllers/JobsController.cs](ChaseListAPI/Controllers/JobsController.cs) - file upload endpoint.
+- [ChaseListAPI/Models/JobuploadRequest.cs](ChaseListAPI/Models/JobuploadRequest.cs) - request model for uploads.
 
 ## Features
 
-- Accepts a single Excel file plus multiple images in a `multipart/form-data` request.
-- Uses Swagger/OpenAPI for API documentation in development.
+- Accepts one Excel file and multiple images in a `multipart/form-data` request.
+- Swagger/OpenAPI is enabled in development for quick testing.
 
 ## Requirements
 
 - .NET 10 SDK
-- macOS or another supported OS
 
 ## Getting started
 
-1. Open the project in VS Code or your preferred IDE.
-2. Restore packages and build the project:
+1. Open the project in your IDE (VS Code recommended).
+2. Restore packages and build:
 
 ```bash
 cd "ChaseListAPI/ChaseListAPI"
@@ -32,46 +31,50 @@ dotnet build
 
 ## Run the API
 
+Start the app (from repo root or project folder):
+
 ```bash
 dotnet run --project "ChaseListAPI/ChaseListAPI.csproj"
 ```
 
-By default, the app runs with HTTPS and Swagger enabled in the development environment.
+When running in the development environment, Swagger UI is available at `https://localhost:<port>/swagger`.
 
-## API endpoints
+## Upload endpoint
 
-### Upload file
-
-- `POST /api/jobs`
+- Endpoint: `POST /api/jobs`
 - Content type: `multipart/form-data`
 - Form fields:
-  - `ExcelFile` - the Excel file to upload
-  - `Images` - one or more image files
+  - `ExcelFile` (file) - the Excel file to upload
+  - `Images` (file[]) - one or more image files
 
-Example request body fields:
+### Example `curl` (multipart/form-data)
 
-- `ExcelFile` = `file.xlsx`
-- `Images` = `image1.png`, `image2.jpg`, etc.
+Replace `<port>` with the port reported by `dotnet run`.
 
-### Sample response
+```bash
+curl -k -X POST "https://localhost:<port>/api/jobs" \
+  -F "ExcelFile=@/path/to/list.xlsx" \
+  -F "Images=@/path/to/image1.jpg" \
+  -F "Images=@/path/to/image2.png"
+```
+
+### Sample JSON response
 
 ```json
 {
   "message": "Files uploaded successfully.",
-  "ExcelFile": "example.xlsx",
+  "ExcelFile": "list.xlsx",
   "Images": 2
 }
 ```
 
-## Swagger
+## Testing with Swagger
 
-When running in development, open the Swagger UI at:
+Run the API in development and open the Swagger UI at `https://localhost:<port>/swagger` to try the `POST /api/jobs` endpoint using the interactive form.
 
-```
-https://localhost:<port>/swagger
-```
+## Notes & next steps
 
-## Notes
+- Currently the API returns a confirmation and does not persist uploaded files. To store files add logic in `JobsController.UploadFile`.
+- Consider adding a storage implementation (local disk, Azure Blob, or S3) and input validation for file size/type.
 
-- The API currently returns a simple confirmation response and does not persist uploads.
-- Add storage or processing logic in `JobsController.UploadFile` to handle the uploaded files.
+If you'd like, I can add a `curl` command with an example Excel and image, create a Postman collection, or implement simple local storage handling in the controller.
