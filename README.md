@@ -2,6 +2,18 @@
 
 A minimal ASP.NET Core 10 Web API for uploading an Excel file and related images in a single request.
 
+## Version 1 Progress
+
+### ✅ Version 1 Progress
+
+- ✔ ASP.NET Core Web API
+- ✔ Swagger
+- ✔ Upload Excel
+- ✔ Upload multiple images
+- ✔ Read Excel into `CreativeRequirement`
+- ✔ Read image metadata into `ImageDetails`
+- 🔷 Validation stage in progress (`ValidationService` exists, rules can be added next)
+
 ## Project structure
 
 - [ChaseListAPI/ChaseListAPI.csproj](ChaseListAPI/ChaseListAPI.csproj) - project file.
@@ -75,6 +87,7 @@ Run the API in development and open the Swagger UI at `https://localhost:<port>/
 ## Notes & next steps
 
 - Currently the API returns a confirmation and does not persist uploaded files. To store files add logic in `JobsController.UploadFile`.
+- Excel validation in `Services/ExeclService.cs` now requires column A to contain a valid integer. Empty A cells are skipped, and non-numeric values are ignored to avoid parsing errors.
 - Consider adding a storage implementation (local disk, Azure Blob, or S3) and input validation for file size/type.
 
 If you'd like, I can add a `curl` command with an example Excel and image, create a Postman collection, or implement simple local storage handling in the controller.

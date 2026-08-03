@@ -27,6 +27,7 @@ namespace ChaseListAPI.Api.Controllers
          
             var imageDetails = await _imageServices.GetImageInfoAsync(request.Images);
             var excelRequirements = await _excelService.ReadRequirementsAsync(request.ExcelFile);
+            var validationResults = _validationService.Validate(excelRequirements, imageDetails);
 
             // Handle file upload logic here
             return Ok(new
@@ -34,7 +35,8 @@ namespace ChaseListAPI.Api.Controllers
                 message = "Files uploaded successfully.",
                 ExcelFile = request.ExcelFile.FileName,
                 Images = imageDetails,
-                ExcelRequirements = excelRequirements
+                ExcelRequirements = excelRequirements,
+                ValidationResults = validationResults
             });
         }
     }
