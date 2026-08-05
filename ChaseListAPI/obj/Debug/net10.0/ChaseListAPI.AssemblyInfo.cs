@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChaseListAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d6acfb2709fa4fc2538e9e1b0210a6d714216e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChaseListAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChaseListAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

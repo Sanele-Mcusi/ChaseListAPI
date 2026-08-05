@@ -1,3 +1,5 @@
+using ChaseListAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+builder.Services.AddScoped<ExcelService>();
+builder.Services.AddScoped<ImageServices>();
+builder.Services.AddScoped<ValidationService>();
 
 var app = builder.Build();
 
@@ -20,8 +26,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+app.UseAuthorization();
 app.UseHttpsRedirection();
+app.MapControllers();
 
 var summaries = new[]
 {
